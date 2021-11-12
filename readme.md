@@ -1,3 +1,20 @@
 # How to share UAS data using public clouds 
 
-Author: Jinha Jung (jinha@purdue.edu), Jose Landivar
+Written by Jinha Jung (jinha@purdue.edu), Jose L. Landivar Scott (jose.landivarscott@ag.tamu.edu).
+Please contact authors for any questions on this tutorial.
+
+## How to set up a web server using OCI
+
+1. Creating an account on OCI
+2. Creating a new instance with Linux OS
+3. Installing and configuring a web server
+4. Configuring a domain name service
+
+## How to share raster data as a web service
+
+1. Uploading raster data via SFTP
+2. Configuring FOSS environments
+3. Generating tile map layers
+4. Configuring tile map service
+
+## How to share 3D point cloud data as a web service
