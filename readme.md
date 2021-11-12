@@ -3,6 +3,8 @@
 Written by Jinha Jung (jinha@purdue.edu), Jose L. Landivar Scott (jose.landivarscott@ag.tamu.edu).
 Please contact authors for any questions on this tutorial.
 
+Acknowledgement: We really appreciate support from **Oracle for Research** for providing Oracle Cloud Infrastructure (OCI) credits. Please contact Bryan Barker (bryan.barker@oracle.com) for any further questions on OCI. 
+
 ## How to set up a web server using OCI
 
 1. Creating an account on OCI
