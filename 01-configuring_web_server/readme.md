@@ -13,19 +13,18 @@ $ sudo apt update
 $ sudo apt install apache2
 ```
 
-### Step 2 - Adjusting the firewall
+### Step 2 - Adjusting the firewall (OCI)
 
-```
-$ sudo ufw app list
-```
-
-```
-$ sudo ufw allow 'Apache'
-```
-
-```
-$ sudo ufw status
-```
+1. Click the name of the instance you created from the "Compute - Instances" menu.
+2. Click "Virtual cloud network" link
+3. Click the name of subnet
+4. Click "Default Security List for ..." 
+5. Click "Add Ingress Rules"
+6. Source CIDR: 0.0.0.0/0
+7. IP Protocol: TCP
+8. Source port range: All
+9. Destination port range: 80
+10. Description: Web server
 
 
 ### Step 3 - Checking the web server
