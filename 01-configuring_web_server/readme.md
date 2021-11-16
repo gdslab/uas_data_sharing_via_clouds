@@ -19,7 +19,7 @@
     2. Type “sudo chmod 600 name.key", where 'name' is the name of the key saved, enter the computer password and press enter
     3. Type “ssh -i name.key ubuntu@address”, where 'name' is the name of the key saved and 'address' is the public ip address assigned, and press enter
     4. Type “yes" and press enter
-    5. You are now cconnected to the instance.
+    5. You are now connected to the instance.
         
 
 
