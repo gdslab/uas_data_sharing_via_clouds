@@ -30,33 +30,16 @@
 Install apache http
 
 ```
-$ sudo yum install httpd -y
-```
-
-Start the apache server and configure it to start after systtem reboots
-
-```
-$ sudo apachectl start
-$ sudo systemctl enable httpd
-```
-
-Run a quick check on apache configurations
-
-```
-sudo apachectl configtest
+$ sudo apt update
+$ sudo apt install apache2
 ```
 
 Createt firewall rules to allow access to the ports on which the HTTP server listens.
 
 ```
+$ sudo apt install firewalld
 $ sudo firewall-cmd --permanent --zone=public --add-service=http
 $ sudo firewall-cmd --reload
-```
-
-Now create index.html file in the document root.
-
-```
-$ sudo bash -c 'echo This is my Web-Server running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
 ```
 
 ### Step 2 - Adjusting the firewall (OCI)
