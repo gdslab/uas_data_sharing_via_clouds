@@ -24,14 +24,39 @@
 
 
 ## 3. Web server installation
+
 ### Step 1 - Installing Apache
 
-```
-$ sudo apt update
-```
+Install apache http
 
 ```
-$ sudo apt install apache2
+$ sudo yum install httpd -y
+```
+
+Start the apache server and configure it to start after systtem reboots
+
+```
+$ sudo apachectl start
+$ sudo systemctl enable httpd
+```
+
+Run a quick check on apache configurations
+
+```
+sudo apachectl configtest
+```
+
+Createt firewall rules to allow access to the ports on which the HTTP server listens.
+
+```
+$ sudo firewall-cmd --permanent --zone=public --add-service=http
+$ sudo firewall-cmd --reload
+```
+
+Now create index.html file in the document root.
+
+```
+$ sudo bash -c 'echo This is my Web-Server running on Oracle Cloud Infrastructure >> /var/www/html/index.html'
 ```
 
 ### Step 2 - Adjusting the firewall (OCI)
@@ -47,18 +72,9 @@ $ sudo apt install apache2
 9. Destination port range: 80
 10. Description: Web server
 
+### Step 3 - Checking if the web server is up and running
 
-### Step 3 - Checking the web server
-
-```
-$ sudo systemctl status apache2
-```
-
-If this gives you a message *active (running)*, then now you can check the web server through your public IP address
-
-```
-http://your_server_ip
-```
+You can visit http://<public_ip_address> in your browser. You should see the index page of the web server you just created above. 
 
 ### Step 4 - DocumentRoot
 
