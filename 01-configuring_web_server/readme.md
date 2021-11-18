@@ -8,9 +8,9 @@
     2. Select the Menu button > Compute > Instances > Select a compartment > Create instance
     3. Set a name for the instance
     4. On the 'Image and shape' box, click on 'Change image'
-    5. From the 'Image source' dropdown, select 'Platform images' > Canonical Ubuntu > click on 'Select image'
-    6. Click on 'Change shape' > **select desired shape > click on 'Select shape'
-    7. Scroll down to the 'Add SSH keys' box > click on 'Save Private Key'
+    5. From the 'Image source' dropdown, select 'Platform images'
+    6. Select 'Canonical Ubuntu' > click on 'Select image'
+    7. Leave the Shape confiiguration as default and scroll down to the 'Add SSH keys' box > click on 'Save Private Key'
     8. Near the bottom of the page, click on 'Create'
     9. Save the 'Public IP address' that has been assigned to the instance
     
@@ -22,14 +22,31 @@
     4. Type “yes" and press enter
     5. You are now connected to the instance.
     
-#### Step 2.2 - Connecting to the Instance using Windows
-    1. Open a terminal window on the folder where the private key is
-    2. Type “sudo chmod 600 name.key", where 'name' is the name of the key saved, enter the computer password and press enter
-    3. Type “ssh -i name.key ubuntu@address”, where 'name' is the name of the key saved and 'address' is the public ip address assigned, and press enter
-    4. Type “yes" and press enter
-    5. You are now connected to the instance.
-        
+#### Step 2.2.1 - Connecting to the Instance using Windows (Windows PowerShell)
+    1. Open Settings, select Apps > Apps & Features, then select Manage optional Features
+    2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then:
+        2.1 Find OpenSSH Client, then click Install
+        2.2 Find OpenSSH Server, then click Install
+    3. Once installed, open Windows PowerShell as an administrator
+    4. Go to the folder where the private key is
+    5. Type “ssh -i name.key ubuntu@address”, where 'name' is the name of the key saved and 'address' is the public ip address assigned, and press enter
+    6. Type “yes" and press enter
+    7. You are now connected to the instance.
+    
+#### Step 2.2.2 - Connecting to the Instance using Windows (Putty) - NEED TO CHANGE FILE PERMISSION
+    1. Look for Putty in Google search
+    2. Enter the first link 'https://www.putty.org/'
+    3. Click on "here" at "You can download PuTTY here."
+    4. Click on the link next to '64-bit x86:'
+    5. After file has been downloaded, click on it to start installation
+    6. Once installed, open PuTTY
+    7. On the 'Host Name (or IP address) box, enter the public IP address
+    8. From the left side, click on the (+) sign next to 'SSH' > click on Auth
+    9. Click on "Browse..." to select the private key that was downloaded when creating the instance > Open
+    10. Click on "Open" > Click on "Accept" > when prompt 'login as' enter "ubuntu" and press enter 
 
+      
+      
 ## 3. Web server installation
 
 ### Step 1 - Installing Apache
