@@ -15,13 +15,20 @@
     9. Save the 'Public IP address' that has been assigned to the instance
     
 ### Step 2 - Connecting to the Instance
+#### Step 2.1 - Connecting to the Instance using MacOS
+    1. Open a terminal window on the folder where the private key is
+    2. Type “sudo chmod 600 name.key", where 'name' is the name of the key saved, enter the computer password and press enter
+    3. Type “ssh -i name.key ubuntu@address”, where 'name' is the name of the key saved and 'address' is the public ip address assigned, and press enter
+    4. Type “yes" and press enter
+    5. You are now connected to the instance.
+    
+#### Step 2.2 - Connecting to the Instance using Windows
     1. Open a terminal window on the folder where the private key is
     2. Type “sudo chmod 600 name.key", where 'name' is the name of the key saved, enter the computer password and press enter
     3. Type “ssh -i name.key ubuntu@address”, where 'name' is the name of the key saved and 'address' is the public ip address assigned, and press enter
     4. Type “yes" and press enter
     5. You are now connected to the instance.
         
-
 
 ## 3. Web server installation
 
