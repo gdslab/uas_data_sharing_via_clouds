@@ -10,7 +10,7 @@
     4. On the 'Image and shape' box, click on 'Change image'
     5. From the 'Image source' dropdown, select 'Platform images'
     6. Select 'Canonical Ubuntu' > click on 'Select image'
-    7. From 'Shape series' select 'Intel' > VM.Standard2.4  > click on 'Ok'
+    7. Click on 'Change shape' > select 'Intel' > VM.Standard2.4  > click on 'Select shape'
     8. Scroll down to the 'Add SSH keys' box > click on 'Save Private Key'
     9. Near the bottom of the page, click on 'Create'
     10. Save the 'Public IP address' that has been assigned to the instance
