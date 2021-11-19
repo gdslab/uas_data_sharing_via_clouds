@@ -23,7 +23,7 @@
     4. Type “yes" and press enter
     5. You are now connected to the instance.
     
-#### Step 2.2.1 - Connecting to the Instance using Windows (Windows PowerShell)
+#### Step 2.2 - Connecting to the Instance using Windows (Windows PowerShell)
     1. Open Settings, select Apps > Apps & Features, then select Manage optional Features
     2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then:
         2.1 Find OpenSSH Client, then click Install
