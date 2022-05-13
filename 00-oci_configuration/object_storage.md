@@ -22,3 +22,75 @@ To create a bucket
 5. Click Create.
 
 The bucket is created immediately and you can start uploading objects. Objects added to archive buckets are immediately archived and must be restored before they are available for download.
+
+# Mounting an Object storage bucket as file system on OCI
+
+Following https://blogs.oracle.com/cloud-infrastructure/post/mounting-an-object-storage-bucket-as-file-system-on-oracle-linux
+
+Recently, I found that I need to move a lot of automatically generated report files to Object Storage for easy delivery. I could do this in one of several ways: by writing a Python script using Oracle Cloud Infrastructure SDKs, using pre-authenticated requests, writing curl, and bash scripts. But I thought it would be nice to access Object Storage content directly using a file system without having to change any of my existing automation scripts.
+
+Thanks to the s3fs-fuse project and Oracle Cloud Infrastructure's S3 compatible API, this is possible and pretty easy to do.
+
+For this tutorial, you need an Oracle Cloud Infrastructure account, and Oracle Linux 7 compute instance, SSH, and about 10 minutes. Let's start!
+
+## Prerequisites:
+
+Make sure that bucket you're trying to mount is in the compartment listed for S3 compatibility, by default it's a root compartment of the tenancy.
+
+If you need to change that, settings are located under Administration->Tenancy Details->Edit Object Storage Settings
+
+### Step 1: Install s3fs-fuse
+
+You can install s3fs-fuse either from source or by using a prebuilt package from the Oracle Linux EPEL repository. In this post, I'm using the binary RPM.
+
+```
+$ sudo yum install s3fs-fuse
+```
+
+### Step 2: Configure Credentials
+
+In the Oracle Cloud Infrastructure Console, click the Profile icon in the top-right corner, and select User Settings.
+
+Click Customer Secret Keys, and then click Generate Secret Key.
+
+Give the key a meaningful name (for example, s3fs-access), and then click Generate Secret Key. 
+
+Copy and save the secret key because it won't be shown again.
+
+The S3 credentials are created by using an access key and the secret key. The access key is displayed in the Customer Secret Keys area of the Console.
+
+Enter your credentials in a ${HOME}/.passwd-s3fs file and set owner-only permissions:
+
+```
+$ echo ACCESS_KEY_ID:SECRET_ACCESS_KEY > ${HOME}/.passwd-s3fs
+$ chmod 600 ${HOME}/.passwd-s3fs
+```
+
+### Step 3: Mount the File System
+
+Run the mount by using the following command:
+
+```
+s3fs [bucket] [destination directory] -o endpoint=[region] -o passwd_file=${HOME}/.passwd-s3fs -o url=https://[namespace].compat.objectstorage.[region].oraclecloud.com/ -onomultipart -o use_path_request_style
+```
+
+As shown, S3-compatible endpoints are built in the following format:
+
+```
+mynamespace.compat.objectstorage.aa-region-1.oraclecloud.com
+```
+
+If you are using the opc user, you will see the following error:
+
+```
+fuse: failed to exec fusermount: Permission denied
+```
+
+Run the following command, and then try again:
+
+```
+sudo chmod +x /usr/bin/fusermount
+```
+
+Now you can use the Object Storage bucket as a mostly POSIX-compliant file system.
+
