@@ -1,6 +1,6 @@
 # How to share UAS data using public clouds 
 
-Written by Jinha Jung (jinha@purdue.edu) and Jose L. Landivar Scott (jose.landivarscott@ag.tamu.edu).
+Written by Jinha Jung (jinha@purdue.edu), Jose L. Landivar Scott (jose.landivarscott@ag.tamu.edu), and Zhou Zhang (zzhang347@wisc.edu).
 Please contact authors for any questions on this tutorial.
 
 **Acknowledgement**: We really appreciate support from **![oracle](figures/oracle.gif) for Research**  for providing Oracle Cloud Infrastructure (OCI) credits. Please contact Bryan Barker (bryan.barker@oracle.com) for any further questions on OCI. 
