@@ -71,8 +71,15 @@ $ chmod 600 ${HOME}/.passwd-s3fs
 Run the mount by using the following command:
 
 ```
-s3fs [bucket] [destination directory] -o endpoint=[region] -o passwd_file=${HOME}/.passwd-s3fs -o url=https://[namespace].compat.objectstorage.[region].oraclecloud.com/ -onomultipart -o use_path_request_style
+$ s3fs [bucket] [destination directory] -o endpoint=[region] -o passwd_file=${HOME}/.passwd-s3fs -o url=https://[namespace].compat.objectstorage.[region].oraclecloud.com/ -onomultipart -o use_path_request_style
 ```
+
+This was an example that worked for my case.
+
+```
+$ s3fs test_bucket /home/opc/test_bucket -o passwd_file=/home/opc/.passwd-s3fs -o url=https://idsp1fccc3bw.compat.objectstorage.us-ashburn-1.oraclecloud.com -onomultipart -o use_path_request_style -o endpoint=us-ashburn-1
+```
+
 
 As shown, S3-compatible endpoints are built in the following format:
 
@@ -89,7 +96,7 @@ fuse: failed to exec fusermount: Permission denied
 Run the following command, and then try again:
 
 ```
-sudo chmod +x /usr/bin/fusermount
+$ sudo chmod +x /usr/bin/fusermount
 ```
 
 Now you can use the Object Storage bucket as a mostly POSIX-compliant file system.
