@@ -47,6 +47,13 @@ You can install s3fs-fuse either from source or by using a prebuilt package from
 $ sudo yum install s3fs-fuse
 ```
 
+The above command is for Oracle Linux. If you're using Ubuntu image, then
+
+```
+$sudo apt install s3fs
+```
+
+
 ### Step 2: Configure Credentials
 
 In the Oracle Cloud Infrastructure Console, click the Profile icon in the top-right corner, and select User Settings.
@@ -74,10 +81,16 @@ Run the mount by using the following command:
 $ s3fs [bucket] [destination directory] -o endpoint=[region] -o passwd_file=${HOME}/.passwd-s3fs -o url=https://[namespace].compat.objectstorage.[region].oraclecloud.com/ -onomultipart -o use_path_request_style
 ```
 
-This was an example that worked for my case.
+This was an example that worked for my case on Oracle linux.
 
 ```
 $ s3fs test_bucket /home/opc/test_bucket -o passwd_file=/home/opc/.passwd-s3fs -o url=https://idsp1fccc3bw.compat.objectstorage.us-ashburn-1.oraclecloud.com -onomultipart -o use_path_request_style -o endpoint=us-ashburn-1
+```
+
+And this is for Ubuntu linux.
+
+```
+$ s3fs test_bucket /home/ubuntu/test_bucket -o passwd_file=/home/ubuntu/.passwd-s3fs -o url=https://idsp1fccc3bw.compat.objectstorage.us-ashburn-1.oraclecloud.com -onomultipart -o use_path_request_style -o endpoint=us-ashburn-1
 ```
 
 
