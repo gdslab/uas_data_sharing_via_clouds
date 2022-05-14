@@ -49,6 +49,13 @@ $ sudo apt update
 $ sudo apt install gh
 ```
 
+Now, you need to create a token to work with gh. Visit https://github.com/settings/tokens to create a new token.
+Make it sure to check **repo** and **read:org**. After this, you will need to log in using 
+
+```
+$ gh auth login
+```
+
 Then check out the modified version
 ```
 $ gh pr checkout 405
