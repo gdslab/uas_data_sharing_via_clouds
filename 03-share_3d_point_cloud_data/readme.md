@@ -2,19 +2,7 @@
 
 ## Installing PotreeConverter 1.7
 
-Following https://github.com/potree/PotreeConverter/tree/1.7
-
-### First, install git
-
-```
-$ sudo yum install git
-```
-
-Then, install required tools
-
-```
-$ sudo yum install libmpc-devel mpfr-devel gmp-devel gcc gcc-c++ git cmake boost-devel
-```
+This instruction is designed for Ubuntu 20.04. 
 
 ### Configuration for Ubuntu 20.04
 
