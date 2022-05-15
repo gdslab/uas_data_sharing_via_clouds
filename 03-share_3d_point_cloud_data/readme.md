@@ -16,6 +16,13 @@ Then, install required tools
 $ sudo yum install libmpc-devel mpfr-devel gmp-devel gcc gcc-c++ git cmake boost-devel
 ```
 
+### Configuration for Ubuntu 20.04
+
+```
+$ sudo apt install cmake
+$ sudo apt-get install build-essential cmake g++
+```
+
 ### Then install lastools
 
 ```
@@ -34,7 +41,6 @@ First check out 1.7 version
 
 ```
 $ cd ~/dev/workspaces/PotreeConverter
-$ wget https://github.com/potree/PotreeConverter/archive/refs/tags/1.7.tar.gz
 $ git clone https://github.com/potree/PotreeConverter.git master
 $ cd master
 $ git checkout tags/1.7
