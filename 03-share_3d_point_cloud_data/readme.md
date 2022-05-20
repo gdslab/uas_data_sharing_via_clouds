@@ -7,8 +7,7 @@ This instruction is designed for Ubuntu 20.04.
 ### Configuration for Ubuntu 20.04
 
 ```
-$ sudo apt install cmake
-$ sudo apt-get install build-essential cmake g++
+$ sudo apt install build-essential cmake g++
 ```
 
 ### Then install lastools
