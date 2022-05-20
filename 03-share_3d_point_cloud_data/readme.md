@@ -62,3 +62,41 @@ $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=~/dev/workspaces/lastools/master/LASzip/dll -DLASZIP_LIBRARY=~/dev/workspaces/lastools/master/LASzip/build/src/liblaszip.so ..
 $ make
 ```
+
+## Installing PotreeConverter 2.1
+
+This instruction is designed for Ubuntu 20.04. 
+
+### Configuration for Ubuntu 20.04
+
+```
+$ sudo apt install build-essential cmake g++
+$ sudo apt install libtbb-dev
+```
+
+### Then install lastools
+
+```
+$ cd ~/dev/workspaces/lastools
+$ git clone https://github.com/m-schuetz/LAStools.git master
+$ cd master/LASzip
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+```
+
+### Install PotreeConverter
+
+First check out 2.1 version
+
+```
+$ cd ~/dev/workspaces/PotreeConverter
+$ git clone https://github.com/potree/PotreeConverter.git master
+$ cd master
+$ git checkout tags/2.1
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=~/dev/workspaces/lastools/master/LASzip/dll -DLASZIP_LIBRARY=~/dev/workspaces/lastools/master/LASzip/build/src/liblaszip.so ..
+$ make
+```
