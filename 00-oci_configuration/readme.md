@@ -1,5 +1,12 @@
 This document includes instruction on how to create a new compartment and assign a user to the newly created compartment.
 
+# Creating an account
+
+You can follow a tutorial from OCI.
+
+https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/addingusers.htm
+
+
 # Creating a compartment
 
 You can create a new compartment or use an existing compartment. You must have permission to create and delete compartments.
@@ -24,11 +31,6 @@ To create a new compartment:
 
 4. Return to the navigation pane.
 
-# Creating an account
-
-You can follow a tutorial from OCI.
-
-https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/addingusers.htm
 
 ## Create a Compartment and Add a User with Access to It
 
