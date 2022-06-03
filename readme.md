@@ -7,10 +7,10 @@ Please contact authors for any questions on this tutorial.
 
 ## How to set up a web server using OCI
 
-1. Creating an account on OCI
-2. Creating a new instance with Linux OS
-3. Installing and configuring a web server
-4. Configuring a domain name service
+1. Creating an account on OCI - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/00-oci_configuration/readme.md)
+2. Creating a new instance with Linux OS - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/00-oci_configuration/create_new_instance.md)
+3. Installing and configuring a web server - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/01-configuring_web_server/readme.md)
+4. Connect object storage for large data storage - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/00-oci_configuration/object_storage.md)
 
 ## How to share raster data as a web service
 
