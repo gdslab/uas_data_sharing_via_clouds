@@ -67,3 +67,15 @@ Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 4096 bytes / 1048576 bytes
 ```
+
+## Mount attached block volume
+ 
+ Once the disk is attached, you can run the following commands to format the dist and mount it.
+ 
+ ```
+ $ sudo ls -l /dev/sdb
+ $ sudo mkfs -t ext4 /dev/sdb
+ $ sudo mkdir /mnt/disk1
+ $ sudo mount /dev/sdb /mnt/disk1
+ $ df -h
+ ```
