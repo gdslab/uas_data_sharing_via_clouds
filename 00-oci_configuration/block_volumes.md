@@ -79,3 +79,9 @@ I/O size (minimum/optimal): 4096 bytes / 1048576 bytes
  $ sudo mount /dev/sdb /mnt/disk1
  $ df -h
  ```
+
+ Now add this line in the /etc/fstab file.
+ 
+ ```
+ /dev/sdb        /mnt/alfalfa_bv ext4    defaults        0       1
+ ```
