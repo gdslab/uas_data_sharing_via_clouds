@@ -16,10 +16,10 @@ Please contact authors for any questions on this tutorial.
 
 ## How to share raster data as a web service
 
-1. Uploading raster data via SFTP
-2. Configuring FOSS environments
-3. Generating tile map layers
-4. Configuring tile map service
+1. Uploading raster data via SFTP - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/upload_raster_data_via_sftp.md)
+2. Configuring FOSS environments - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/readme.md)
+3. Generating tile map layers - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/readme.md)
+4. Configuring tile map service - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/readme.md)
 
 ## How to share 3D point cloud data as a web service
 
