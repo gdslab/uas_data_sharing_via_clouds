@@ -83,5 +83,5 @@ I/O size (minimum/optimal): 4096 bytes / 1048576 bytes
  Now add this line in the /etc/fstab file.
  
  ```
- /dev/sdb        /mnt/bv    defaults        0       1
+ /dev/sdb        /mnt/bv    ext4 defaults        0       1
  ```
