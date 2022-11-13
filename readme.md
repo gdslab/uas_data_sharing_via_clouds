@@ -21,7 +21,7 @@ Please contact authors for any questions on this tutorial.
 3. Generating tile map layers - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/readme.md)
 4. Configuring tile map service - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/readme.md)
 
-## How to share 3D point cloud data as a web service
+## How to share 3D point cloud data as a web service - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/03-share_3d_point_cloud_data/readme.md)
 
 1. Uploading point cloud data via SFTP
 2. Configuring FOSS environments
