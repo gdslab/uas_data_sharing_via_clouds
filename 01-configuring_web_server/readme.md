@@ -12,6 +12,14 @@ $ sudo apt update
 $ sudo apt install apache2
 ```
 
+Check if the webserver is up and running.
+
+```
+$ sudo systemctl status apache2
+```
+
+### Step 2 - Update Ubuntu firewall
+
 Createt firewall rules to allow access to the ports on which the HTTP server listens.
 
 ```
@@ -20,7 +28,7 @@ $ sudo firewall-cmd --permanent --zone=public --add-service=http
 $ sudo firewall-cmd --reload
 ```
 
-### Step 2 - Adjusting the firewall (OCI)
+### Step 3 - Update the firewall (OCI)
 
 1. Click the name of the instance you created from the "Compute - Instances" menu.
 2. Click "Virtual cloud network" link
@@ -33,11 +41,11 @@ $ sudo firewall-cmd --reload
 9. Destination port range: 80
 10. Description: Web server
 
-### Step 3 - Checking if the web server is up and running
+### Step 4 - Checking if the web server is up and running
 
 You can visit http://<public_ip_address> in your browser. You should see the index page of the web server you just created above. 
 
-### Step 4 - DocumentRoot
+### Step 5 - DocumentRoot
 
 The **DocumentRoot** is the top-level directory in the document tree visible from the web and this directive sets the directory in the configuration from which the web server looks for and serves web files from the requested URL to the document root. Default **DocumentRoot** is */var/www/html*. 
 This means some accesses to *http://your_ip_address/index.html* refers to */var/www/html/index.html*. 
