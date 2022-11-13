@@ -21,7 +21,7 @@ $ sudo chown ubuntu:ubuntu raster_example
 Download an example orthomosaic data for this tutorial.
 
 ```
-$ wget https://hub.jinha.org/outbox/ppac_rgb_orthomosaic_example.tif
+$ wget https://hub.digitalforestry.org/outbox/ppac_rgb_orthomosaic_example.tif
 ```
 
 Upload it to the server using SFTP. You will need to use a SFTP client for this. I will use FileZilla for the demonstration.
