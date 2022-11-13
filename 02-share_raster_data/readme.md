@@ -63,16 +63,7 @@ $ gdal2tiles.py -z 15-22 -s EPSG:32616 ppac_rgb_orthomosaic_example.tif ppac_rgb
 $ gdal2tiles.py -z 15-22 -s EPSG:32616 --xyz ppac_rgb_orthomosaic_example.tif ppac_rgb_xyz
 ```
 
-Now you should be able to see the generated tile maps from below URL.
+Now create a new html file using the template provided [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/02-share_raster_data/leaflet_template.html)
 
-http://129.146.56.121/raster_example/ppac_rgb_xyz/openlayers.html
-
-You can also send others a link to download the data.
-
-http://129.146.56.121/raster_example/ppac_rgb_orthomosaic_example.tif
-
-You can also use this as a background layer in QGIS.
-
-http://129.146.56.121/raster_example/ppac_rgb_xyz/{z}/{x}/{y}.png
-
+* You will need to change several things from the template to meet your configurations. 
 
