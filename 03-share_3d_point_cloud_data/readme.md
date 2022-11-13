@@ -66,4 +66,6 @@ $ cd resources/page_template
 $ cp -r libs /var/www/html
 ```
 
-Now Create a new html file using the template 
+Now Create a new html file using the template [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/03-share_3d_point_cloud_data/potree_template.html)
+
+
