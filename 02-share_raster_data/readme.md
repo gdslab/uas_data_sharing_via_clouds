@@ -67,3 +67,4 @@ Now create a new html file using the template provided [here](https://github.com
 
 * You will need to change several things from the template to meet your configurations. 
 
+Once you're done with the edit, then you should be able to visit the html file to visualize the orthomosaic image. 
