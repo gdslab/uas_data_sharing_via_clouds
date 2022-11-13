@@ -42,9 +42,9 @@
   <body>
     <div id="map"></div>
     <script>
-      const maxZoomLevel = 22;
+      const maxZoomLevel = 23;
       const map = L.map("map", {
-        center: L.latLng([41.4553404, -86.9415506]),  // Replace these numbers with the center coordinates of the map
+        center: L.latLng([LATITUTE, LONGITUTE]), 
         zoom: 17,
         minZoom: 5,
         maxZoom: maxZoomLevel,
@@ -59,7 +59,7 @@
       ).addTo(map);
 
       const ppac_rgb = L.tileLayer(
-        "http://150.136.8.34/data/ppac_rgb/{z}/{x}/{y}.png", // Replace this with the server IP address
+        "http://YOUR_SERVER_IP_ADDRESS/PATH_TO_TILEMAP/{z}/{x}/{y}.png", 
         {
           tms: true,
           maxZoom: maxZoomLevel,
