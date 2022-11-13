@@ -100,3 +100,9 @@ $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=~/dev/workspaces/lastools/master/LASzip/dll -DLASZIP_LIBRARY=~/dev/workspaces/lastools/master/LASzip/build/src/liblaszip.so ..
 $ make
 ```
+
+## Example point cloud data
+
+```
+$ wget https://hub.digitalforestry.org/outbox/3d_plant_example.las
+```
