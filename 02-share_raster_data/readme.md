@@ -3,7 +3,6 @@
 ## Step 1 - Installing GDAL Binary package
 
 ```
-$ sudo add-apt-repository ppa:ubuntugis/ppa
 $ sudo apt update
 $ sudo apt install gdal-bin
 ```
