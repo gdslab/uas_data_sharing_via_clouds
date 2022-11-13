@@ -23,7 +23,7 @@ Please contact authors for any questions on this tutorial.
 
 ## How to share 3D point cloud data as a web service - [here](https://github.com/gdslab/uas_data_sharing_via_clouds/blob/main/03-share_3d_point_cloud_data/readme.md)
 
-1. Uploading point cloud data via SFTP
-2. Configuring FOSS environments
+1. Installing PotreeConverter
+2. Uploading las file to the server
 3. Converting point cloud data into Potree format
 4. Configuring 3D point cloud visualization service
