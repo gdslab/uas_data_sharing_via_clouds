@@ -27,12 +27,6 @@ The bucket is created immediately and you can start uploading objects. Objects a
 
 Following https://blogs.oracle.com/cloud-infrastructure/post/mounting-an-object-storage-bucket-as-file-system-on-oracle-linux
 
-Recently, I found that I need to move a lot of automatically generated report files to Object Storage for easy delivery. I could do this in one of several ways: by writing a Python script using Oracle Cloud Infrastructure SDKs, using pre-authenticated requests, writing curl, and bash scripts. But I thought it would be nice to access Object Storage content directly using a file system without having to change any of my existing automation scripts.
-
-Thanks to the s3fs-fuse project and Oracle Cloud Infrastructure's S3 compatible API, this is possible and pretty easy to do.
-
-For this tutorial, you need an Oracle Cloud Infrastructure account, and Oracle Linux 7 compute instance, SSH, and about 10 minutes. Let's start!
-
 ## Prerequisites:
 
 Make sure that bucket you're trying to mount is in the compartment listed for S3 compatibility, by default it's a root compartment of the tenancy.
