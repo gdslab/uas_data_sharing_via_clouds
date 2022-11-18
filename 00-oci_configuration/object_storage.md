@@ -87,6 +87,8 @@ And this is for Ubuntu linux.
 $ s3fs test_bucket /home/ubuntu/test_bucket -o passwd_file=/home/ubuntu/.passwd-s3fs -o url=https://idsp1fccc3bw.compat.objectstorage.us-ashburn-1.oraclecloud.com -onomultipart -o use_path_request_style -o endpoint=us-ashburn-1
 ```
 
+You can get the specific region name from https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm
+
 
 As shown, S3-compatible endpoints are built in the following format:
 
