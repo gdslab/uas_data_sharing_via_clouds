@@ -7,31 +7,6 @@ You can follow a tutorial from OCI.
 https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/addingusers.htm
 
 
-# Creating a compartment
-
-You can create a new compartment or use an existing compartment. You must have permission to create and delete compartments.
-
-1. Open the navigation menu and click **Identity & Security**. Under **Identity**, click **Compartments**. A list of the compartments in your tenancy is displayed.
-
-2. Select the compartment in which you want to create your instance or create a new compartment.
-
-To create a new compartment:
-
-1. Click **Create Compartment** to create the compartment to use for creating an instance.
-
-2. Enter the following:
-
-  * **Name**: Enter a name that is unique across all compartments in your tenancy (maximum 100 characters, including letters, numbers, periods, hyphens, and underscores). For example, enter a name such as OICCompartment.
-
-  * **Description**: Enter a description for this compartment.
-
-  * **Tags**: Enter tags to organize and list resources based on your business needs. See Managing Tags and Tag Namespaces.
-
-3. Click **Create Compartment**.
-
-4. Return to the navigation pane.
-
-
 ## Create a Compartment and Add a User with Access to It
 
 In this example, create a compartment called "Sandbox" and then create a user with access to only that compartment.
